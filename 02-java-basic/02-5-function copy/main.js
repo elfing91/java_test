@@ -11,3 +11,23 @@ const myFun2=function(){
     console.log("call")
 
 }
+
+myFun1()
+myFun2()
+
+//arrow 함수
+
+const myFun3=()=>{
+    console.log("call")
+}
+
+myFun3()
+
+//화살표함수, 결과리턴
+const myFun4 =(arg1)=>{
+    console.log("call")
+    return20
+}
+
+let result4=myFun4(10)
+console.log(result4)
