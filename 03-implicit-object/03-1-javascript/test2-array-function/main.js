@@ -22,6 +22,13 @@ array3.unshift(3000,4000)
 array3.pop()////맨 뒤 삭제
 array3.shift()//맨앞 삭제
 
+//splice함수 (인덱스/삭제개수/추가데이터)
+let array=[10,20,30,40]
+array.splice(2,0,'hello')//2번 인덱스에서 0개를 지우고 'hello'데이터 추가
+//10,20,'hello',30,40
+
+array.splice(2, 0, 'one','two')//여러개의 데이터 추가가능
+//10,20,'one','two','hello',30,40
 
 
 
