@@ -20,3 +20,29 @@ result=array.map((value)=>{
     return value*2
 })
 console.log(result)
+
+//배열 정렬
+//정렬을 하려면 두 데이터중 어느 데이터가 더 큰지 판단해야함
+result=array.sort((data1,data2)=>{
+    //반환값은 1,0,-1
+    //1:data1이 더크다
+    //0같다
+    //-1:data1이 더 작다
+    if(data1>data2){ return 1}
+    else if(data1==data2){ return 0}
+    else{ return -1}
+
+})
+console.log(result)//오름차순 정렬함
+
+result=array.sort((data1,data2)=>{//내림차순 정렬
+    //반환값은 1,0,-1
+    //1:data1이 더크다
+    //0같다
+    //-1:data1이 더 작다
+    if(data1<data2){ return 1}
+    else if(data1==data2){ return 0}
+    else{ return -1}
+
+})
+console.log(result)//내림차순 정렬함
