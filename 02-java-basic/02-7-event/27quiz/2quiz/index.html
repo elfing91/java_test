@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> 로그인</h1>
+    <form id="myForm">
+        ID:<input type="text" id="id" onblur="idValidCheck()"><br>
+        
+        <div id="idErrormsg" class="errorMsg"></div>
+        <p class="hidden" style="color: red;">
+            아이디는 필수 입력입니다
+        </p>
+
+        pw:<input type="text" id="pw" onblur="pwValidCheck()"><br>
+        <div id="pwErrormsg" class="errorMsg"></div>
+
+        <p class="hidden" style="color: red;">
+        패스워드는 필수 입력입니다
+        </p>
+
+        <p class="hidden" style="color: red;">
+        패스워드는 영문자 숫자 조합 6자 이상이어야 합니다
+        </p>
+
+        <button id="loginBtn" onclick="login()">로그인</button>
+        <br>
+        <div id="result">result</div>
+
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
