@@ -1,63 +1,53 @@
 "use strict"
 
+let inputNode = document.getElementById('word')
 let addNode = document.getElementById('addBtn')
 let mapNode = document.getElementById('mapBtn')
 let filterNode = document.getElementById('filterBtn')
 let sortNode = document.getElementById('sortBtn')
 
 let resultNode = document.getElementById('result')
+let wordArray = []//빈 배열 선언
+
+function printResult(array) {//화면 출력함수
+    let result = ''
+    array.forEach((value, index) => {
+        result += `<li>${value}</li>`
+
+    });
+    resultNode.innerHTML = result
+}
 
 
-let array = []
-function add() {
-    array.push(addNode.value)
-
-     for (let i=0; i<array.length;i++){
-        resultNode.innerHTML = array[i]
-
-     }
-
+function add() { //단어추가함수
+    let word = inputNode.value//인풋데이터 값을 word에 저장
+    wordArray.push(word)
+    printResult(wordArray)
 }
 
 function map() {
-    result = array.map((value) => {
-        return value * 2
+    let resultArray = wordArray.map((value) => {
+        return value.toUpperCase()
     })
-    console.log(result)
+    printResult(resultArray)
 
-
-    let resultNode = document.getElementById('result')
-    resultNode.innerHTML = `${id}, ${pw} 로 로그인을 시도합니다.`
 }
 
 function filter() {
-    let result = array.filter((value) => {
-        return value >= 5
+    let resultArray = wordArray.filter((value) => {
+        return value.length > 5
     })
-
-
-
-    let resultNode = document.getElementById('result')
-    resultNode.innerHTML = `${id}, ${pw} 로 로그인을 시도합니다.`
+    printResult(resultArray)
 }
 
 function sort() {
-
-    result = array.sort((data1, data2) => {
-        //반환값은 1,0,-1
-        //1:data1이 더크다
-        //0같다
-        //-1:data1이 더 작다
-        if (data1 > data2) { return 1 }
-        else if (data1 == data2) { return 0 }
-        else { return -1 }
-
+    let resultArray = wordArray.sort((data1, data2) => {
+        if (data1 > data2) return 1
+        else if (data1 == data2) return 0
+        else return -1
     })
-    console.log(result)//오름차순 정렬함
+    printResult(resultArray)
 
-
-    let resultNode = document.getElementById('result')
-    resultNode.innerHTML = `${id}, ${pw} 로 로그인을 시도합니다.`
 }
 
 
