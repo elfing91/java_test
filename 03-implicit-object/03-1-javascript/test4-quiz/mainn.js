@@ -18,9 +18,12 @@ function printResult(array){
 
 }
 function input(){
+    let word=inputNode.value//인풋노드의 값(id가 word인 엘레먼트의 인풋값)을 word변수에 할당
+    wordArray.push(word)
 
-    printResult(resultArray)
+    printResult(wordArray)
 }
+
 function map(){
     printResult(resultArray)
 
