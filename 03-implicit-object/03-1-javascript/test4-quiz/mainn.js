@@ -14,9 +14,9 @@ let resultArray = ''
 function printResult(array) {//✨array를 매개변수로 전달받음
     array.forEach((index, value) => { //✨전달받은 결과 배열의 각 요소(인덱스, 값)
         //array.forEach((index.value)=>{}) //resultArray에 각 배열의 요소마다 입력받는 array값 추가하기
-        resultArray = `<li>${array}</li>`//✨최종출력배열에 li형식으로 할당
+        resultArray = `<li>${array}</li><br>`//✨최종출력배열에 li형식으로 할당
     })
-    resultNode.innerHTML(resultArray)
+    resultNode.innerHTML=resultArray
 }
 
 function add() {
