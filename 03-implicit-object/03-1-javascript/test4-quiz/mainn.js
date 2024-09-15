@@ -8,29 +8,32 @@ let sortNode = document.getElementById("sortBtn")
 let resultNode = document.getElementById("result")
 
 let wordArray = []
-let resultArray = ''
 
 
 function printResult(array) {//✨array를 매개변수로 전달받음
-    array.forEach((index, value) => { //✨전달받은 결과 배열의 각 요소(인덱스, 값)
+    let resultArray = ''  //❔문제1) 함수내에서 선언해야하는 이유
+
+    array.forEach(( value,index) => { //✨전달받은 결과 배열의 각 요소(인덱스, 값)  //❔문제2)value,index 순서
         //array.forEach((index.value)=>{}) //resultArray에 각 배열의 요소마다 입력받는 array값 추가하기
-        resultArray = `<li>${array}</li><br>`//✨최종출력배열에 li형식으로 할당
+        resultArray += `<li>${value}</li>`//✨최종출력배열에 li형식으로 할당
     })
-    resultNode.innerHTML=resultArray
+    resultNode.innerHTML=resultArray//❔문제3)resultNode.innerHTML(resultArray)이 안되는 이유
 }
 
 function add() {
-    let word = inputNode.value//인풋노드의 값(id가 word인 엘레먼트의 인풋값)을 word변수에 할당
+    let word = inputNode.value//인풋노드의 값(id가 word인 엘레먼트의 인풋값)을 word변수에 할당->입력값을 하나씩 word배열에 추가하기 위해
     wordArray.push(word)
 
     printResult(wordArray)
 }
 
 function map() {
-    let resultArray = wordArray.map((value) => {
-        return value.toUppercase()
+    let resultArray=wordArray.map((value)=>{
+        return value.toUpperCase()
     })
+
     printResult(resultArray)
+
 
 }
 function filter() {
