@@ -33,19 +33,19 @@ function map() {
     })
 
     printResult(resultArray)
-
-
 }
 function filter() {
-    let resultArray=wordArray.filter((value)=>{
-        return value.length()>5
+    let resultArray=wordArray.filter((value)=>{ //❔문제1) filter함수안의 value의 뜻은?
+        return value.length>5  //❔문제2) 왜 if문을 안쓰고 바로 value의 길이연산후 리턴시킬까
     })
     printResult(resultArray)
-
 }
 function sort() {
-    let resultArray=wordArray.sort((value)=>{
-        
+    let resultArray=wordArray.sort((data1,data2)=>{
+        if(data1>data2) return 1
+        else if(data1==data2) return 0
+        else return -1
+  
     })
     printResult(resultArray)
 
