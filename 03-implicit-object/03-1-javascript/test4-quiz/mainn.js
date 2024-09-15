@@ -41,8 +41,8 @@ function filter() {
     printResult(resultArray)
 }
 function sort() {
-    let resultArray=wordArray.sort((data1,data2)=>{
-        if(data1>data2) return 1
+    let resultArray=wordArray.sort((data1,data2)=>{ //❔문제1) 매개변수가 2개인 이유는?
+        if(data1>data2) return 1 //❔문제2)왜 1,0,-1을 반환하는데 정렬이 되는가?
         else if(data1==data2) return 0
         else return -1
   
