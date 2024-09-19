@@ -28,3 +28,17 @@ console.log('timestamp',date1.getTime())
 // day 4
 // seconds 10
 // timestamp 1726708870198
+
+//date 비교
+let eventStartDate=new Date('2024-09-18 10:14:43')
+let eventEndDate=new Date('2024-09-20 10:14:43')
+
+let regDate=new Date('2024-09-19 10:14:43')
+
+if(regDate.getTime()<eventStartDate.getTime()){
+    console.log("이벤트 시작전")
+}else if(regDate.getTime()>eventEndDate.getTime()){
+    console.log("이벤트 시작후")
+}else{
+    console.log("예약완료")
+}
