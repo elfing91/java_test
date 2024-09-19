@@ -15,3 +15,16 @@ let date3=new Date(2024,9-1,19,10,10,10)//월데이터는 0부터시작, 0이 1�
 console.log(date3.toLocaleString())//2024. 10. 19. 오전 10:10:10
 //0에서 웰데이터가 시작하므로 9월이 아니라 10월이 출력->9-1로 월데이터 입력
 
+//날짜의 특정 데이터만 추출
+console.log('year',date1.getFullYear())
+console.log('month',date1.getMonth())
+console.log('date',date1.getDate())
+console.log('day',date1.getDay())
+console.log('seconds',date1.getSeconds())
+console.log('timestamp',date1.getTime())
+//year 2024
+// month 8
+// date 19
+// day 4
+// seconds 10
+// timestamp 1726708870198
