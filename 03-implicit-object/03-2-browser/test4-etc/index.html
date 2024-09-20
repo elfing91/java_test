@@ -38,5 +38,32 @@ function goGoogle2(){//뒤로가기 못함
 }
 
  </script>
+
+ <h3>history test</h3>
+ <button onclick="goBack()">goBack</button>
+ <button onclick="goForward()">goForward</button>
+ <button onclick="go()">go</button>
+
+
+<script>
+    function goBack(){
+        history.back()
+    }
+    function goForward(){
+        history.forward()
+    }
+    function go(){
+        let input=prompt('숫자를 입력하라')
+        if(isNaN(input)){
+            alert('숫자를 입력하라')
+        }else{
+            let no=parseInt(input)
+            history.go(no)
+        }
+    }
+</script>
+
+
+
 </body>
 </html>
