@@ -65,6 +65,16 @@
     }
 </script>
 
+<p><button onclick="selectorTest()">selectorTest</button></p>
+<script>
+    function selectorTest() {
+        let selectNode = document.querySelectorAll('#a2 div')
+        for(let i=0;i<selectNode.length;i++)[
+            selectNode[i].style.backgroundColor='purple'
+        ]
+    }
+</script>
+
 </body>
 
 </html>
