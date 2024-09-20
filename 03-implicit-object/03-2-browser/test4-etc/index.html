@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>로케이션 테스트</h1>
     <button onclick="locationTest()">로케이션 테스트</button>
 
     <script>
-        function locationTest(){
+        function locationTest() {
             console.log(location.href)
             //http://127.0.0.1:5501/03-implicit-object/03-2-browser/test4-etc/index.html
             console.log(location.protocol)//http:
@@ -28,42 +30,56 @@
     <button onclick="goGoogle1()">구글이동-href</button>
     <button onclick="goGoogle2()">구글이동-replace</button>
 
-<script>
-function goGoogle1(){//되돌리기 가능
-    location.href="https://www.google.com"
-}
-function goGoogle2(){//뒤로가기 못함
-    location.replace('https://www.google.com')
-
-}
-
- </script>
-
- <h3>history test</h3>
- <button onclick="goBack()">goBack</button>
- <button onclick="goForward()">goForward</button>
- <button onclick="go()">go</button>
-
-
-<script>
-    function goBack(){
-        history.back()
-    }
-    function goForward(){
-        history.forward()
-    }
-    function go(){
-        let input=prompt('숫자를 입력하라')
-        if(isNaN(input)){
-            alert('숫자를 입력하라')
-        }else{
-            let no=parseInt(input)
-            history.go(no)
+    <script>
+        function goGoogle1() {//되돌리기 가능
+            location.href = "https://www.google.com"
         }
-    }
-</script>
+        function goGoogle2() {//뒤로가기 못함
+            location.replace('https://www.google.com')
 
+        }
+
+    </script>
+
+    <h3>history test</h3>
+    <button onclick="goBack()">goBack</button>
+    <button onclick="goForward()">goForward</button>
+    <button onclick="go()">go</button>
+
+
+    <script>
+        function goBack() {
+            history.back()
+        }
+        function goForward() {
+            history.forward()
+        }
+        function go() {
+            let input = prompt('숫자를 입력하라')
+            if (isNaN(input)) {
+                alert('숫자를 입력하라')
+            } else {
+                let no = parseInt(input)
+                history.go(no)
+            }
+        }
+
+    </script>
+
+    <h3>navigation test</h3>
+    <button onclick="navigatorTest()">navigatorTest</button>
+
+    <script>
+        function navigatorTest() {
+            console.log(navigator.cookieEnabled)//true (쿠키허용)
+            console.log(navigator.language)//ko-KR
+            console.log(navigator.onLine)//true (네트워킹 됨)
+            console.log(navigator.userAgent)
+            //Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36
+        }
+    </script>
 
 
 </body>
+
 </html>
