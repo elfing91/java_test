@@ -24,5 +24,19 @@
             console.log(location.origin)//http://127.0.0.1:5501
         }
     </script>
+
+    <button onclick="goGoogle1()">구글이동-href</button>
+    <button onclick="goGoogle2()">구글이동-replace</button>
+
+<script>
+function goGoogle1(){//되돌리기 가능
+    location.href="https://www.google.com"
+}
+function goGoogle2(){//뒤로가기 못함
+    location.replace('https://www.google.com')
+
+}
+
+ </script>
 </body>
 </html>
