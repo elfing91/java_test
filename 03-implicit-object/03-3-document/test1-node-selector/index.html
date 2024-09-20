@@ -18,6 +18,7 @@
     </div>
 
     <input name="address"><br>
+    <div id="result"></div>
     <p><button onclick="idTest()">idTest</button></p>
 
     <script>
@@ -41,7 +42,6 @@
     </script>
 
 <p><button onclick="classTest()">classTest</button></p>
-
 <script>
     function classTest() {
         //class이름으로 노드 획득
@@ -50,6 +50,18 @@
         for (let i = 0; i < selectNode.length; i++) {
             selectNode[i].style.backgroundColor = 'yellow'
         }
+    }
+</script>
+
+<p><button onclick="nameTest()">nameTest</button></p>
+
+<script>
+    function nameTest() {
+        //name이름으로 노드 획득
+        //input에 입력한 데이터를 result에 출력
+        let addressNode = document.getElementsByName('address')
+        let resultNode=document.getElementById('result')
+        resultNode.innerHTML=`${addressNode[0].value}`
     }
 </script>
 
