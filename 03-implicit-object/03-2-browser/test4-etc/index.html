@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로케이션 테스트</h1>
+    <button onclick="locationTest()">로케이션 테스트</button>
+
+    <script>
+        function locationTest(){
+            console.log(location.href)
+            //http://127.0.0.1:5501/03-implicit-object/03-2-browser/test4-etc/index.html
+            console.log(location.protocol)//http:
+            console.log(location.host)//127.0.0.1:5501 (port이름도 포함)
+            console.log(location.hostname)//127.0.0.1 (도메인만)
+            console.log(location.port)//5501 (포트번호)
+            console.log(location.pathname)
+            ///03-implicit-object/03-2-browser/test4-etc/index.html
+            console.log(location.search)
+            console.log(location.hash)
+            console.log(location.origin)//http://127.0.0.1:5501
+        }
+    </script>
+</body>
+</html>
