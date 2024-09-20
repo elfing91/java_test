@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>one</div>
+    <div>two</div>
+    <div id="a1">three</div>
+    <div class="b1">four</div>
+    <div id="a2">
+        <div>five</div>
+        <div class="b1">six</div>
+    </div>
+
+    <input name="address"><br>
+    <p><button onclick="idTest()">idTest</button></p>
+
+    <script>
+        function idTest(){
+            //id속성값으로 노드 획득
+            let selectNode=document.getElementById('a1')
+            selectNode.style.backgroundColor='red'
+        }
+    </script>
+
+<p><button onclick="tagNameTest()">tagNameTest</button></p>
+
+<script>
+    function tagNameTest(){
+        //tag이름으로 노드 획득
+        //html컬렉션
+        let selectNode=document.getElementsByTagName('div')
+        for(let i=0;i<selectNode.length;i++){
+        selectNode[i].style.backgroundColor='blue'
+        }
+    }
+</script>
+
+</body>
+
+</html>
