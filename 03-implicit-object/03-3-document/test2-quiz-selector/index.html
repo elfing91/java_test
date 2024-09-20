@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h3>회원가입</h3>
-    이름:
-    <input id="name" type="text">
-    <br>
+    <form id="myForm">
+        <h3>회원가입</h3>
+        이름:
+        <input id="name" type="text">
+        <br>
 
-    취미<br>
-    <input type="checkbox" name="hobby">여행
-    <input type="checkbox" name="hobby">요리
-    <br>
+        취미<br>
+        <input type="checkbox" name="hobby" value="여행">여행
+        <input type="checkbox" name="hobby" value="요리">요리
+        <br>
 
-    성별<br>
-    <input type="radio" name="gender">남성
-    <input type="radio" name="gender">여성
-    <br>
+        성별<br>
+        <input type="radio" name="gender">남성
+        <input type="radio" name="gender">여성
+        <br>
 
-    <button type="submit" onclick="member()">회원가입</button>
-    <button type="reset">취소</button>
-    <br>
-    <div id="result"></div>
+        <button type="submit" onclick="member()">회원가입</button>
+        <button type="reset">취소</button>
+        <br>
+        <div id="result"></div>
 
+    </form>
     <script src="main.js"></script>
-    
+
 </body>
+
 </html>
