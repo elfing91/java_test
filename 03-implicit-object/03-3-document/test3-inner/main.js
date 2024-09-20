@@ -37,6 +37,6 @@ let link2=document.getElementById('link2')
 link2.setAttribute('href','https://www.musinsa.com/products/1029352')
 
 //속성제거
-let link3=document
-link3.removeAttribute
+let link3=document.getElementById('link3')
+link3.removeAttribute()
 
