@@ -4,7 +4,7 @@ let area1=document.getElementById('area1')
 let area2=document.getElementById('area2')
 let area3=document.getElementById('area3')
 
-//evenet핸들러 등록, 버블링 단계제서 실행할 핸들러
+//evenet핸들러 등록, 버블링 단계제서 실행할  핸들러 
 area1.addEventListener('click',function(){
     console.log('bubling area1 event handler')
 })
