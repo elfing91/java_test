@@ -1,8 +1,8 @@
 let result1=document.getElementById('result1')
-result1.innerHTML='<div><a href="#">link </a>hello</div>'
+result1.innerHTML='<div><a href="#">link </a> hello</div>'
 
 
-//위와 동일하게 node를 create해서 추가
+//위와 동일하게 node를  create해서 추가
 let newDiv=document.createElement('div')
 let newA=document.createElement('a')
 let newHref=document.createAttribute('href')
