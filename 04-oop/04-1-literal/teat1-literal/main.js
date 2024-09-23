@@ -1,0 +1,1 @@
+//객체선언-object literal기법으로
