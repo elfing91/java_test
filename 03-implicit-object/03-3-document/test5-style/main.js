@@ -14,3 +14,9 @@ console.log(area3.style.width)//
 console.log(area1.style.height)
 console.log(area1.style.backgroundColor)
 
+//노드의 css속성값 변경
+area1.addEventListener('click',function(){//클릭 이벤트시 노란원으로 만드는 함수
+    area1.style.backgroundColor='yellow'
+    area1.style.borderRadius='50%'
+})
+
