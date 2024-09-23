@@ -36,5 +36,25 @@ user.sayhello()
 user.sayhello1()//hello,홍길동-20
 user.sayhello2()//hello,-undefined
 
+//축약으로 멤버 선언
+let name='김길동'
+let age=20
 
+let user1={
+    name,
+    age,
+    sayhelloo:function(){
+        console.log(`hell0o,${this.name}-${this.age}`)
 
+    }
+}
+
+user1.sayhelloo()//hell0o,김길동-20
+
+//객체 외부에서 멤버 추가 가능
+user1.address='seoul'
+user1.sayhelloo2=function(){
+    console.log(`hell002,${this.name}-${this.address}`)
+
+}
+user1.sayhelloo2()//hell002,김길동-seoul
