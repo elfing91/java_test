@@ -20,3 +20,22 @@ console.log(`${obj1.name},${obj1.age}`)//undefined,undefined
 //객체내에는 name,age,sayHello()가 없다
 
 //생성자 함수로 준비
+function User2(name,age){
+    this.name=name
+    this.age=age
+    this.sayHello=function(){
+        console.log(`${this.name},${this.age}`)
+    }
+
+}
+//일반함수 이용
+User2('홍길동',20)//에러
+//new를 이용하지 않았으므로 this가 준비되지 않았다->this사용시 에러발생
+
+//객체생성으로 이용
+//생성자함수를 선언하고 이 모형을 통해 동일 구조의 객체를 반복생성
+let user1=new User2('홍길동',20)
+let user2=new User2('홍길동',20)
+user1.sayHello()
+user1.sayHello()
+
