@@ -34,8 +34,8 @@ User2('홍길동',20)//에러
 
 //객체생성으로 이용
 //생성자함수를 선언하고 이 모형을 통해 동일 구조의 객체를 반복생성
-let user1=new User2('홍길동',20)
-let user2=new User2('홍길동',20)
+let user1=new User2('홍길동 ',20)
+let user2=new User2('홍길동 ',20)
 user1.sayHello()
 user1.sayHello()
 
