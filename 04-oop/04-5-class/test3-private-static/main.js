@@ -9,12 +9,12 @@ class User{
         this.name=name
         this.age=age
     }
-    myFun(){
+    #myFun(){
         console.log('muFun call')
     }
     sayHello(){
         console.log(`hello,${this.name},${this.age} `)
-        this.myFun()
+        this.#myFun()
     }
 
 }
@@ -24,5 +24,5 @@ user.age=30
 
 user.sayHello()//hello,김길동,30 //myFun call
 
-user.myFun()//myFun call
+//user.#myFun()//에러
 
