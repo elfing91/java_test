@@ -26,3 +26,21 @@ user.sayHello()//hello,김길동,30 //myFun call
 
 //user.#myFun()//에러
 
+// static test
+//클래스는 객체의 모형이다. 클래스의 대부분 멤버는 객체메모리에 할당되어야 하는 객체 멤버
+//선별적으로 메모리 할당이 필요없는 멤버엔, static예약어를 붙암
+class MyClass{
+    data1=10
+    static data2=20
+    myFun1(){
+        console.log(`myFun1 call,${this.data1},${this.data2} `)
+
+    }
+   static myFun2(){
+        console.log(`myFun1 call,${this.data1},${this.data2} `)
+
+    }
+}
+//static 멤버접근, 객체생성없이 클래스명으로 접근함
+MyClass.myFun2()//myFun1 call,undefined,20 
+console.log(MyClass.data2)//20
