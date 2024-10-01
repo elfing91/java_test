@@ -44,3 +44,7 @@ class MyClass{
 //static 멤버접근, 객체생성없이 클래스명으로 접근함
 MyClass.myFun2()//myFun1 call,undefined,20 
 console.log(MyClass.data2)//20
+
+//객체멤버는 클래스명으로 접근할 수 없고 객체를 생성해 접근해야 한다
+console.log(MyClass.data1)//undefined
+MyClass.myFun1()//에러
