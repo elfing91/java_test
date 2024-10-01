@@ -31,10 +31,20 @@ class Sub extends Super{
     static data4=40
     subFun(){
         console.log(this.data1)
-        console.log(this.#data2)//에러-private는 자신의 클래스에서만 사용가능
+       // console.log(this.#data2)//에러-private는 자신의 클래스에서만 사용가능
         //private는 상속안됨->하위 클래스에서 사용불가
 
-    }
+    } 
 }
 let obj=new Sub()
-obj.subFun()
+obj.subFun()//10
+
+console.log(Super.data3)//30 -> 자기껄 자기이름으로 호출하니 에러없음
+console.log(Sub.data3)//30 -> 자기껄 자기이름으로 호출하니 에러없음
+//상위 static멤버를 하위 클래스명으로 이용가능하다
+
+//정리
+//private는 상속불가, static은 상속가능
+
+
+
