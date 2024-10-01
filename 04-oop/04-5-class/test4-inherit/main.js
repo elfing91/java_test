@@ -74,12 +74,37 @@ class Sub1 extends Super1{
     //개발자가 명시적으로 생성자를 추가했고 상위 클래스가 명시되어 있다면
     //생성자내에서 반드시 상위 생성자 호출해야 함
 
-    constructor(){
+    // constructor(){
 
-        super()//this는 생성자 내에서 첫줄에 한번만 추가한다
-    }
+    //     super()//this는 생성자 내에서 첫줄에 한번만 추가한다
+    // }
 }
 let obj1=new Sub1()
 
+class Shape2{
+    calArea(){
+
+    }
+}
+
+//test4
+class Rect2 extends Shape2{
+    //변수 오버라이드
+    data=20
+    constructor(name,x,y,width,height){
+        super(name,x,y)
+        this.width=width
+        this.height=height
+    }
+    //함수 오버라이드
+    calArea(){
+        super.calArea()
+        console.log(`넓이는${this.width*this.height}`)
+        
+    }
+}
+let rect3=new Rect(`사각형`,10,10,20,20)
+console.log(rect3.data)
+rect3.calArea()
 
 
