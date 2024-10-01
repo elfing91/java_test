@@ -20,3 +20,21 @@ rect.y=10
 rect.height=100
 rect.width=100
 rect.draw()//사각형을 10,10에 그립니다
+
+//test2-private,static 상속관계
+class Super{
+    data1=10
+    #data2=20
+    static data3=30
+}
+class Sub extends Super{
+    static data4=40
+    subFun(){
+        console.log(this.data1)
+        console.log(this.#data2)//에러-private는 자신의 클래스에서만 사용가능
+        //private는 상속안됨->하위 클래스에서 사용불가
+
+    }
+}
+let obj=new Sub()
+obj.subFun()
