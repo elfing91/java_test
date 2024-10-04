@@ -55,4 +55,12 @@ function myFun5(){
         })
 }
 myFun5()
-//then으로 promise를 이용하는 함수를 아래처럼 작성
+
+
+//then()으로 Promise를 이용하는 함수를 await로도 작성 가능
+async function myFun6() {
+    console.log(await getData(1))
+    console.log(await getData(1))
+    console.log(await getData(1))
+}
+myFun6()
