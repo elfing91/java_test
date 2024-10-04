@@ -27,3 +27,32 @@ function myFun3(){
     })
 }
 myFun3().then((value)=>console.log(value))//1
+
+async function myFun4() {
+    return 2//data 발생-내부적으로 promise의 resolve 활용
+}
+myFun4().then((value)=>console.log(value)) //2
+
+//test3-promise 데이터 반복적으로 실행 획득
+function getData(id){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>resolve(`${id} data`),1000)
+    })
+}
+function myFun5(){
+    getData(1)
+        .then((value)=>{
+            console.log(value)
+            return getData(2)
+        })
+        .then((value)=>{
+            console.log(value)
+            return getData(3)
+        })
+        .then((value)=>{
+            console.log(value)
+            
+        })
+}
+myFun5()
+//then으로 promise를 이용하는 함수를 아래처럼 작성
