@@ -82,5 +82,28 @@ async function myFun7() {
     console.timeEnd()
 }
 
-//
+//함수호출에 await가 아니라 결과 data에 await/ 함수는 동시진향
+async function  myFun8() {
+    console.time()
+    let aData= funA()
+    let bData= funB()
+    console.log(await aData)
+    console.log(await bData)
+    console.timeEnd()
+
+}
+
+async function myFun9() {
+    console.time()
+    //비동기 함수를 여러개 호출, 동시진행하는 경우
+    //all()을 이용할 수도
+    //배열에 건 함수를 동시 실행시키며 모든 데이터가 획득된령우 콜백호출
+    Promise.all([funA(),funB()]).then((value)=>{
+        console.log(value)
+        console.timeEnd()
+
+    })
+    
+}
+myFun9()
 
